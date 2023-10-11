@@ -4,9 +4,9 @@ import { deleteContact, fetchContacts } from 'services/API';
 import { selectContacts, selectError, selectIsLoading, selectStatusFilter } from 'Redux/selectors';
 
 import { Filter } from '../Filter/Filter';
-import { ContainerItems, ButtonDel, Item } from './FormItems.styled';
+import { ContainerItems, ButtonDel, Item } from './ContactsList.styled';
 
-export const FormItems = () => {
+export const ContactsList = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectStatusFilter);

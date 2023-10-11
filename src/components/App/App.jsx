@@ -1,13 +1,13 @@
 import React from 'react';
 import { ContactForm } from '../ContactForm/ContactForm';
-import { FormItems } from '../FormItems/FormItems';
+import { ContactsList } from '../ContactsList/ContactsList';
 import { Container } from './App.style';
 
 export const App = () => {
   return (
     <Container>
       <ContactForm />
-      <FormItems /> 
+      <ContactsList /> 
     </Container>
   );
 };
