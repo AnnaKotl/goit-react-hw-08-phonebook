@@ -12,7 +12,7 @@ const UserMenu = () => {
 
   return (
     <UserMenuContainer>
-      <UserName>Hello, {email}!</UserName>
+      <UserName>Hello, {email} 👋</UserName>
       <ButtonLogOut onClick={HandleClick}>LogOut</ButtonLogOut>
     </UserMenuContainer>
   );
