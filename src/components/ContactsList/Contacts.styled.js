@@ -1,14 +1,19 @@
 import { styled } from 'styled-components';
-import { Button } from '@chakra-ui/react';
 
-const List = styled.ul`
-  list-style: none;
-  padding: 0;
-  max-width: 100%;
-  margin: 0 auto;
+export const ListWrapp = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto 40px;
+  padding: 20px;
+  width: 500px;
+  background-color: #f2d044;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px -10px 10px -5px;
 `;
 
-const ListItem = styled.li`
+export const ListItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,37 +25,40 @@ const ListItem = styled.li`
   margin: 0 auto;
 `;
 
-const ContactText = styled.p`
+export const ContactText = styled.p`
   margin: 0;
   font-weight: 500;
   font-size: large;
 `;
 
-const DeleteButton = styled(Button)`
-  background-color: #f27868 !important;
-  border-radius: 100px;
-  box-shadow: rgba(187, 44, 44, 0.2) 0 -25px 18px -14px inset,
-    rgba(187, 44, 44, 0.15) 0 1px 2px, rgba(187, 44, 44, 0.15) 0 2px 4px,
-    rgba(187, 44, 44, 0.15) 0 4px 8px, rgba(187, 44, 44, 0.15) 0 8px 16px,
-    rgba(187, 44, 44, 0.15) 0 16px 32px;
+export const DeleteButton = styled.button`
+  margin: 4px;
+  padding: 8px;
+  font-size: 12px;
+  background-color: #e63c22;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  display: inline-block;
-  padding: 7px 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 18px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  width: 60px;
+  align-self: center;
 
   &:hover {
-    box-shadow: rgba(187, 44, 44, 0.35) 0 -25px 18px -14px inset,
-      rgba(187, 44, 44, 0.25) 0 1px 2px, rgba(187, 44, 44, 0.25) 0 2px 4px,
-      rgba(187, 44, 44, 0.25) 0 4px 8px, rgba(187, 44, 44, 0.25) 0 8px 16px,
-      rgba(187, 44, 44, 0.25) 0 16px 32px;
-    transform: scale(1.05) rotate(-1deg);
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px #662d24;
+    background-color: #b32d19;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #662d24;
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 `;
 
@@ -58,5 +66,3 @@ export const ContactWrap = styled.div`
   display: flex;
   gap: 5px;
 `;
-
-export { List, ListItem, ContactText, DeleteButton };

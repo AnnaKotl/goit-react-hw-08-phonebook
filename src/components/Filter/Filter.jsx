@@ -1,8 +1,11 @@
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { StyledInput, FormWrapper } from '../FormContacts/Form.styled';
+import { StyledInput } from '../FormContacts/Form.styled';
 import { selectFilter } from 'redux/contacts/selectors';
 import { setFilter } from 'redux/contacts/filterSlice';
+import { FilterWrapper } from './Filter.styled';
+import { SecondaryTitle } from '../Layout/Layout.styled';
+
 function Filter() {
   const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
@@ -11,7 +14,8 @@ function Filter() {
   };
 
   return (
-    <FormWrapper>
+    <FilterWrapper>
+      <SecondaryTitle>Contacts</SecondaryTitle>
       <label>
         <StyledInput
           type="text"
@@ -21,7 +25,7 @@ function Filter() {
           placeholder="Find contacts by name"
         />
       </label>
-    </FormWrapper>
+    </FilterWrapper>
   );
 }
 

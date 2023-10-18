@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-const FormWrapper = styled.div`
+export const FormWrapper = styled.div`
   width: 520px;
   margin: 20px auto 0;
   padding: 10px;
@@ -11,7 +11,7 @@ export const Title = styled.h1`
   text-align: center;
 `;
 
-const StyledForm = styled.form`
+export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,7 @@ const StyledForm = styled.form`
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 `;
 
-const StyledInput = styled.input`
+export const StyledInput = styled.input`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +52,7 @@ const StyledInput = styled.input`
   }
 `;
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   min-width: 120px;
   margin: 10px auto;
   padding: 10px;
@@ -82,5 +82,3 @@ const StyledButton = styled.button`
     transform: scale(0.95);
   }
 `;
-
-export { FormWrapper, StyledForm, StyledButton, StyledInput };

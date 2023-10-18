@@ -9,7 +9,7 @@ export const NavContainer = styled.nav`
 export const StyledNavLink = styled(NavLink)`
   align-items: center;
   border: 0;
-  background-color: #e1bf38;
+  background-color: #f5e5a6;
   border: 1px solid transparent;
   border-radius: 8px;
   box-shadow: rgba(65, 99, 252, 0.2) 0 15px 30px -5px;
@@ -29,16 +29,21 @@ export const StyledNavLink = styled(NavLink)`
   transition: all 0.3s ease;
 
   &.active {
-    background-color: #f5e5a6;
+    background-color: #e1bf38;
     border: 1px solid transparent;
+    transform: scale(0.95);
   }
 
   &:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border: 1px solid #ccab29;
+
+    transform: scale(1.01);
   }
 
   &:focus {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
 `;

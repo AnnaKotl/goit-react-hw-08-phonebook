@@ -4,45 +4,46 @@ export const UserMenuContainer = styled.div`
   display: flex;
   gap: 20px;
 `;
+
 export const UserName = styled.h2`
   align-items: center;
   display: flex;
   font-size: 18px;
   justify-content: center;
 `;
+
 export const ButtonLogOut = styled.button`
-  align-items: center;
-  border: 0;
-  background-color: #e1bf38;
   border: 1px solid transparent;
   border-radius: 8px;
-  box-shadow: rgba(65, 99, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #2e2304;
-  display: flex;
   font-size: 16px;
-  justify-content: center;
   padding: 10px 20px;
   text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
-  cursor: pointer;
   font-weight: bold;
-  transition: all 0.3s ease;
 
-  &.active {
-    background-color: #f5e5a6;
-    border: 1px solid transparent;
-  }
+  background-color: #e63c22;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  align-self: center;
 
   &:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    border: 1px solid #ccab29;
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px #662d24;
+    background-color: #b32d19;
   }
 
   &:focus {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    outline: none;
+    box-shadow: 0 0 0 2px #662d24;
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 `;

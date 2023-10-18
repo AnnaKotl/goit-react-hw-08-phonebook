@@ -10,7 +10,7 @@ import {
   selectFilteredContacts,
 } from 'redux/contacts/selectors';
 import {
-  List,
+  ListWrapp,
   ListItem,
   ContactText,
   DeleteButton,
@@ -39,8 +39,8 @@ function ContactsList() {
 
   return (
     <>
-      <div>
-        <List>
+      <ListWrapp>
+        <ul>
           {isError && <p style={{ color: 'red', fontSize: 18 }}>{isError}</p>}
           {isLoading && contacts.length === 0 ? (
             <FallingLines
@@ -73,8 +73,8 @@ function ContactsList() {
               </ListItem>
             ))
           )}
-        </List>
-      </div>
+        </ul>
+      </ListWrapp>
     </>
   );
 }

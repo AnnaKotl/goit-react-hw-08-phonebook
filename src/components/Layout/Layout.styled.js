@@ -1,26 +1,21 @@
 import { styled } from 'styled-components';
 
-const Container = styled.div`
+export const Container = styled.div`
   max-width: 1200px;
-
-  padding-left: 15px;
-  padding-right: 15px;
-
-  margin-left: auto;
-  margin-right: auto;
+  padding: 10px;
+  margin: 0 auto;
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   text-align: center;
   font-size: 32px;
   font-weight: 600;
+  padding: 20px 0 0;
 `;
-const SecondaryTitle = styled.h2`
+
+export const SecondaryTitle = styled.h2`
   text-align: center;
   font-weight: 500;
   font-size: 22px;
-  line-height: 1.11;
-  text-transform: capitalize;
+  padding: 0 0 20px;
 `;
-
-export { Container, Title, SecondaryTitle };
