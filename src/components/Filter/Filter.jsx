@@ -1,22 +1,28 @@
-import { useDispatch, useSelector } from "react-redux";
-import { findContacts } from 'Redux/FilterSlice';
-import { FilterInput, ContainerFilter, TitleFilter } from "./Filter.styled";
-
-export const Filter = () => {
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { StyledInput, FormWrapper } from '../FormContacts/Form.styled';
+import { selectFilter } from 'redux/contacts/selectors';
+import { setFilter } from 'redux/contacts/filterSlice';
+function Filter() {
+  const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
+  const handleChangeFilter = event => {
+    dispatch(setFilter(event.currentTarget.value));
+  };
 
   return (
-    <ContainerFilter>
-      <TitleFilter>Enter a name to search:</TitleFilter>
-      <FilterInput
-        type="text"
-        name="filter"
-        placeholder="Enter search name"
-        value={useSelector(state => state.filter.filterValue)}
-        onChange={e => {
-          dispatch(findContacts(e.target.value));
-        }}
-      ></FilterInput>
-    </ContainerFilter>
+    <FormWrapper>
+      <label>
+        <StyledInput
+          type="text"
+          name="filter"
+          value={filter}
+          onChange={handleChangeFilter}
+          placeholder="Find contacts by name"
+        />
+      </label>
+    </FormWrapper>
   );
-};
+}
+
+export default Filter;
